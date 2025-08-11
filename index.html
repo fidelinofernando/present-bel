@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Para Belma — By Fidel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fff8fb;
+      --accent:#d06ca3;
+      --muted:#6b5f6f;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Inter, sans-serif;
+      background: radial-gradient(circle at 10% 10%, #fff0f6 0%, var(--bg) 40%), linear-gradient(180deg,#fff 0%, #fff9fb 100%);
+      color:var(--muted);
+      display:flex;align-items:center;justify-content:center; padding:16px;min-height:100vh;
+    }
+    .card{
+      width:100%; max-width:500px; background:rgba(255,255,255,0.9);
+      border-radius:20px; padding:20px; box-shadow:0 8px 30px rgba(0,0,0,0.05);
+      text-align:center; animation:fadeIn 1s ease forwards;
+    }
+    @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    h1{font-family:'Playfair Display',serif;font-size:2rem;color:var(--accent);margin-bottom:8px}
+    p{line-height:1.6;font-size:1.05rem;margin-bottom:12px}
+    .btn{
+      display:inline-block;margin-top:12px;padding:10px 18px;border-radius:12px;background:linear-gradient(90deg,#ffd9ea,#ffd0f1);color:#6c3b5a;font-weight:600;text-decoration:none;font-size:1rem;
+    }
+    .heart{
+      width:50px;height:50px;margin:20px auto 0;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#ffb3cf,#ff7aa6);animation:pulse 1.2s infinite;box-shadow:0 6px 20px rgba(240,120,160,0.2);
+    }
+    .heart svg{width:26px;height:26px;fill:white}
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Belma</h1>
+    <p>Entrei na tua vida e encontrei luz: a tua gentileza, o teu riso e a calma com que fazes até os dias nublados parecerem menos pesados.</p>
+    <p>Obrigado por ser quem és — uma amiga/companheira tão especial. Esta página é um abraço em pixels e um agradecimento simples.</p>
+    <a href="#" class="btn" id="surpriseBtn">Ler surpresa ✨</a>
+    <div class="heart"><svg viewBox="0 0 24 24"><path d="M12.1 21.35l-1.1-1.02C5.1 15.24 2 12.39 2 8.75 2 6.07 4.21 4 6.88 4c1.54 0 3.04.76 3.9 1.96C11.08 4.76 12.57 4 14.11 4 16.78 4 19 6.07 19 8.75c0 3.64-3.1 6.49-8.98 11.58l-1.92 1.27z"/></svg></div>
+    <p style="font-size:0.85rem;margin-top:6px;color:#8a7485">by Fidel</p>
+  </div>
+  <script>
+    document.getElementById('surpriseBtn').addEventListener('click',function(e){
+      e.preventDefault();
+      alert('Belma, obrigada por entrares na minha vida. O teu sorriso faz os meus dias mais leves. Que todos os sonhos te encontrem. — Fidel');
+    });
+  </script>
+</body>
+</html>
